@@ -80,8 +80,8 @@ const Painel = () => {
         {!showResult ? (
           <>
             <div className="greet">
-              <p><span>“Olá! Como posso te ajudar? </span></p>
-              <p>Bem-vindo! Tire suas dúvidas sobre o Transtorno do Espectro Autista (TEA).</p>
+              <p><span>Bem-vindo! Tire suas dúvidas sobre o Transtorno do Espectro Autista (TEA). </span></p>
+              
             </div>
             <div className="cards">
               {/* CADA CARD AGORA CHAMA handleCardClick */}
