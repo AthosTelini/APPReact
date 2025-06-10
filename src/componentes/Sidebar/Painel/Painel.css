@@ -8,9 +8,8 @@
 .main {
     flex: 1;
     min-height: 100vh;
-
-    padding-bottom: 15vh;
-    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .main .nav {
@@ -36,7 +35,8 @@
 .main-container {
     max-width: 900px;
     margin: auto;
-}
+    flex: 1; 
+    }
 
 .main .greet {
     /* margin: 50px 0px; */
@@ -92,12 +92,10 @@
 }
 
 .main-bottom {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    max-width: 900px;
-    padding: 0px 20px;
-    margin: auto;
+  width: 100%;
+  max-width: 900px;
+  padding: 0px 20px;
+  margin: 20px auto; /* Centraliza e adiciona espaço vertical */
 }
 
 .search-box {
@@ -200,27 +198,161 @@
     line-height: 1.8;
 }
 
-@media (max-width:600px) {
-    .main-bottom input {
-        flex: none;
-        width: 150px;
-    }
+@media (max-width: 600px) {
+  .main .nav {
+    padding: 15px;
+    font-size: 18px;
+  }
 
-    .main-bottom img {
-        width: 20px;
-    }
+  .main .nav p:nth-child(2) {
+    display: none;
+  }
 
-    .search-box {
-        padding: 5px 10px;
-    }
+  .greet {
+    margin: 20px 0px 30px 0px;
+    padding-left: 15px;
+    font-size: 28px;
+  }
 
-    .search-box div {
-        gap: 5px;
-    }
+  .cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+  }
 
-    .greet {
-        margin: 50px 0px;
-        padding-left: 22px;
-    }
+  .card {
+    height: auto;
+    min-height: 180px;
+    padding: 12px;
+  }
 
+  .card p {
+    font-size: 15px;
+  }
+
+  .search-box {
+    padding: 10px 15px;
+    gap: 10px;
+  }
+
+  .search-box input {
+    flex: 1;
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .main-bottom img {
+    width: 22px;
+  }
+
+  .search-box div {
+    gap: 10px;
+  }
+
+  .result {
+    padding: 0px 2%;
+  }
+
+  .result-data p {
+    font-size: 16px;
+  }
+  
+  .dev-footer {
+    font-size: 0.75rem;
+    padding: 15px 5px 10px 5px;
+  }
 }
+
+@media (max-width: 480px) {
+  .greet {
+    font-size: 22px;
+    margin-bottom: 20px;
+    line-height: 1.3;
+  }
+
+   .greet p {
+    font-size: 35px;
+    margin-bottom: 20px;
+    line-height: 1.3;
+  }
+
+  .cards {
+    grid-template-columns: 1fr; 
+    gap: 15px;
+  }
+
+  .card {
+    min-height: initial; /* Remove a altura mínima fixa */
+    height: auto;
+    padding: 15px;
+    transition: transform 0.2s ease;
+  }
+  
+  .card:active {
+    transform: scale(0.98);
+  }
+  
+  .card p {
+    font-size: 16px;
+  }
+
+  .main .nav p:first-child {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 330px) {
+  .main .nav {
+    padding: 12px 10px;
+    
+  }
+
+  .main .nav p:first-child {
+    font-size: 13px;
+  }
+
+  .main .nav img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .greet {
+    font-size: 14px;
+    padding-left: 10px;
+    line-height: 1.3;
+    
+  }
+.greet p{
+    font-size: 35px;
+    padding-left: 10px;
+    line-height: 1.3;
+  }
+  .main .cards {
+    padding: 0 20px;
+  }
+  
+  .main .card {
+    padding: 18px;
+  }
+
+  .card p {
+    font-size: 12px;
+    
+  }
+
+  .search-box {
+    padding: 8px 12px;
+  }
+
+  .search-box input {
+    font-size: 15px;
+  }
+  
+  .bottom-info,
+  .dev-footer {
+    font-size: 0.7rem;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+

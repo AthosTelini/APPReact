@@ -54,7 +54,9 @@ const Painel = () => {
     setLoading(false);
     setInput("");
   };
-
+  const handleReloadPage = () => {
+      window.location.reload();
+    };
   // ALTERAÇÃO 3: O 'Enter' agora chama onSentApi com o valor do input
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
@@ -69,7 +71,7 @@ const Painel = () => {
 
   return (
     <div className="main">
-      <div className="nav">
+      <div className="nav" onClick={handleReloadPage}>
         <p>Transtorno do Espectro Autista (TEA)</p>
         <p onClick={() => newChat()} data-alt="Novo chat">Tire suas dúvidas sobre Transtorno do Espectro Autista (TEA)</p>
         <img src={assets.user_icon} alt="" />
@@ -137,6 +139,23 @@ const Painel = () => {
           <p className="bottom-info">
             Este assistente utiliza uma base de dados com informações sobre o Transtorno do Espectro Autista (TEA). Algumas respostas são geradas por IA e podem conter imprecisões. Consulte fontes oficiais sempre que necessário.
           </p>
+          <footer className="bottom-info">
+          <p>
+            Desenvolvido por{' '}
+            <a href="https://github.com/AthosTelini" target="_blank" rel="noopener noreferrer">
+              Athos Telini
+            </a>{' '}
+            e{' '}
+            <a href="https://github.com/GustavoAlvesLuiz" target="_blank" rel="noopener noreferrer">
+              Gustavo Alves Luiz
+            </a>
+            .
+          </p>
+          <p>
+            Trabalho para a disciplina de Inteligência Artificial II (Prof. Matheus Eloy Franco).
+          </p>
+          <p>Sistemas de Informação - IFSULDEMINAS, Campus Machado © 2025</p>
+        </footer>
         </div>
       </div>
     </div>
