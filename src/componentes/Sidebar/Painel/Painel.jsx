@@ -87,15 +87,15 @@ const Painel = () => {
               {/* CADA CARD AGORA CHAMA handleCardClick */}
               <div className="card" onClick={() => handleCardClick('Entenda o que é o Transtorno do Espectro Autista e suas principais características.')}>
                 <p>Entenda o que é o Transtorno do Espectro Autista e suas principais características.</p>
-                <img src={assets.compass_icon} alt="" />
+                <img src={assets.code_icon} alt="" />
               </div>
               <div className="card" onClick={() => handleCardClick('Como é feito o diagnóstico do TEA e quais profissionais estão envolvidos.')}>
                 <p>Como é feito o diagnóstico do TEA e quais profissionais estão envolvidos.</p>
-                <img src={assets.bulb_icon} alt="" />
+                <img src={assets.code_icon} alt="" />
               </div>
               <div className="card" onClick={() => handleCardClick('Conheça os sinais mais frequentes do autismo em diferentes idades.')}>
                 <p>Conheça os sinais mais frequentes do autismo em diferentes idades.</p>
-                <img src={assets.message_icon} alt="" />
+                <img src={assets.code_icon} alt="" />
               </div>
               <div className="card" onClick={() => handleCardClick('O que se sabe sobre as possíveis causas do TEA até hoje.')}>
                 <p>O que se sabe sobre as possíveis causas do TEA até hoje.</p>
